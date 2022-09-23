@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- See the :pluginNugetPack task in ../rider-plugin/build.gradle.kts for variables sources -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>JetBrains.ReSharper.Plugins.FormatterQuirks</id>
+    <title>Formatter Quirks</title>
+    <version>$plugin_version$</version>
+    <authors>JetBrains</authors>
+    <owners>JetBrains</owners>
+    <summary>A plugin that accumulates some of the *quirkier* formatting rules.</summary>
+    <description>These rules didn't fit quite nicely into the full ReSharper ruleset, but are presented here now instead.</description>
+    <releaseNotes>$ReleaseNotes$</releaseNotes>
+    <iconUrl>http://resharper-plugins.jetbrains.com/Content/Images/packageReSharper.png</iconUrl>
+    <copyright>Copyright 2022 JetBrains, s.r.o</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="Wave" version="[$wave_id$.0.0]" />
+    </dependencies>
+    <tags>resharper formatting</tags>
+  </metadata>
+  <files>
+    <file src="FormatterQuirks\bin\$configuration$\$dotnet_version$\JetBrains.ReSharper.Plugins.FormatterQuirks.dll" target="DotFiles" />
+    <file src="FormatterQuirks\bin\$configuration$\$dotnet_version$\JetBrains.ReSharper.Plugins.FormatterQuirks.pdb" target="DotFiles" />
+  </files>
+</package>

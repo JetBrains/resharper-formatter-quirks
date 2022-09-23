@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <LangVersion>9</LangVersion>
+        <AssemblyName>JetBrains.ReSharper.Plugins.FormatterQuirks.Tests</AssemblyName>
+        <RootNamespace>JetBrains.ReSharper.Plugins.FormatterQuirks.Tests</RootNamespace>
+        <JetTestProject>True</JetTestProject>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+        <Reference Include="mscorlib" />
+
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.1" />
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+
+        <ProjectReference Include="..\..\..\FormatterQuirks\FormatterQuirks.csproj" />
+        <PackageReference Include="NUnit.Console" Version="3.15.2" />
+    </ItemGroup>
+
+    <Import Project="$(DotNetSdkProps)\SubplatformReference.Platform_Sdk.Props" />
+    <Import Project="$(DotNetSdkProps)\SubplatformReference.Psi.Features_test_Framework.Props" />
+</Project>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <LangVersion>9</LangVersion>
+        <OutputType>Library</OutputType>
+        <RootNamespace>JetBrains.ReSharper.Plugins.FormatterQuirks</RootNamespace>
+        <AssemblyName>JetBrains.ReSharper.Plugins.FormatterQuirks</AssemblyName>
+    </PropertyGroup>
+    
+    <ItemGroup Label="References">
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <Import Project="$(DotNetSdkProps)\SubplatformReference.Psi.Features_src.Props" />
+</Project>

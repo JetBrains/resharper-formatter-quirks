@@ -1,0 +1,12 @@
+<idea-plugin url="" require-restart="true" package="com.jetbrains.resharper.quirky">
+    <id>com.jetbrains.resharper.quirky</id>
+    <name>Formatter Quirks</name>
+    <version>2022.2.0.9999</version>
+    <vendor url="https://www.jetbrains.com">JetBrains</vendor>
+
+    <idea-version since-build="2022.2" />
+
+    <depends>com.intellij.modules.rider</depends>
+    <depends>rider.intellij.plugin.appender</depends>
+
+</idea-plugin>

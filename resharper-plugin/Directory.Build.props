@@ -1,0 +1,9 @@
+<Project>
+    <Import Project="$(MSBuildThisFileDirectory)BuildState.Generated.props" Condition="Exists('$(MSBuildThisFileDirectory)BuildState.Generated.props')"/>
+
+    <PropertyGroup>
+        <Company>JetBrains</Company>
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)resharper-formatter-quirks.snk</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
+</Project>
