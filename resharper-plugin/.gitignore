@@ -61,3 +61,5 @@ _NCrunch*
 JetTestPackages
 
 .vs
+
+FormatterQuirks.sln.binlog
