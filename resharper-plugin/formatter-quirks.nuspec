@@ -13,6 +13,8 @@
     <iconUrl>http://resharper-plugins.jetbrains.com/Content/Images/packageReSharper.png</iconUrl>
     <copyright>Copyright 2022 JetBrains, s.r.o</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<projectUrl>https://github.com/JetBrains/resharper-formatter-quirks</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/JetBrains/resharper-formatter-quirks/blob/net$wave_id$/license.txt</licenseUrl>
     <dependencies>
       <dependency id="Wave" version="[$wave_id$.0.0]" />
     </dependencies>
