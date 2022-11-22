@@ -1,11 +1,11 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using JetBrains.Application.Settings;
 using JetBrains.Application.Settings.Calculated.Interface;
 using JetBrains.Application.Threading;
 using JetBrains.Lifetimes;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.CSharp;
-using JetBrains.ReSharper.Psi.CSharp.CodeStyle;
 using JetBrains.ReSharper.Psi.CSharp.Impl.CodeStyle.Formatter;
 using JetBrains.ReSharper.Psi.CSharp.Impl.Tree;
 using JetBrains.ReSharper.Psi.CSharp.Parsing;
@@ -15,6 +15,7 @@ using JetBrains.ReSharper.Psi.Tree;
 
 namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
 {
+#if net222
   [Language(typeof(CSharpLanguage))]
   public class QuirkyFormatterIntAlignPredicate : ICustomShouldDoIntAlignPredicate
   {
@@ -29,6 +30,7 @@ namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
       mySettingsStore.BindToContextTransient(ContextRange.ApplicationWide)
         .GetValue((QuirkyFormattingSettingsKey x) => x.INT_ALIGN_ATTRIBUTE_COMMAS);
   }
+#endif
 
   [Language(typeof(CSharpLanguage))]
   public class QuirkyCSharpFormatterInfoProvider : CSharpFormatterInfoProviderPart
@@ -157,5 +159,11 @@ namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
         )
         .Build();
     }
+#if net223
+    public override IEnumerable<IScalarSetting<bool>> PureIntAlignSettings()
+    {
+      yield return CalculatedSettingsSchema.GetScalarSetting((QuirkyFormattingSettingsKey x) => x.INT_ALIGN_ATTRIBUTE_COMMAS);
+    }
+#endif
   }
 }

@@ -3,6 +3,7 @@ rootProject.name = "formatter-quirks"
 pluginManagement {
     repositories {
         maven { setUrl("https://cache-redirector.jetbrains.com/plugins.gradle.org") }
+        gradlePluginPortal()
         maven { setUrl("https://oss.sonatype.org/content/repositories/snapshots/") }
     }
     resolutionStrategy {
