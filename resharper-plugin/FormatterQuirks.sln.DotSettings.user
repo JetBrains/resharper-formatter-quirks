@@ -1,8 +1,6 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/SolBuilderDuo/UseMsbuildSolutionBuilder/@EntryValue">NewVersion</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4defd14b_002D6014_002D4cf2_002D8367_002Df3a95acb2c41/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CSharpQuirkyFormattingTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::48AEA1CD-C79D-4CC9-9AC0-9F30255FA4BA::.NETFramework,Version=v4.7.2::JetBrains.ReSharper.Plugins.FormatterQuirks.Tests.Psi.CodeStyle.Formatting.CSharpQuirkyFormattingTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Project Location="C:\Users\Egor.Skrypnikov\Documents\NoDefender\resharper-formatter-quirks\resharper-plugin\test\src\FormatterQuirks.Test" Presentation="&amp;lt;FormatterQuirks.Test&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

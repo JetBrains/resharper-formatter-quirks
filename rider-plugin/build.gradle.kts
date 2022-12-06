@@ -16,7 +16,7 @@ repositories {
 }
 
 val sdkVersion = "2022.3-SNAPSHOT"
-val pluginVersion = "2022.3"
+val pluginVersion = "2022.3-EAP"
 
 val skipDotNet = false
 val projectDirPath = projectDir.invariantSeparatorsPath
