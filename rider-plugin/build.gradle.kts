@@ -16,7 +16,7 @@ repositories {
 }
 
 val sdkVersion = "2022.3-SNAPSHOT"
-val pluginVersion = "2022.3-EAP"
+val pluginVersion = "2022.3.1"
 
 val skipDotNet = false
 val projectDirPath = projectDir.invariantSeparatorsPath
@@ -266,7 +266,7 @@ tasks {
                 "-Djna.boot.library.path=${setupDependencies.orNull?.idea?.get()?.classes}/lib/jna/${System.getProperty("os.arch")}")
     }
 
-    val nuGetPack by registering(com.ullink.NuGetPack::class) {
+    val pluginNuGetPack by registering(com.ullink.NuGetPack::class) {
         dependsOn(buildDotnet)
         packageAnalysis = false
         packageVersion = pluginVersion

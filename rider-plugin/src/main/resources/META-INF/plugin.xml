@@ -1,7 +1,7 @@
 <idea-plugin url="" require-restart="true" package="com.jetbrains.resharper.quirky">
     <id>com.jetbrains.resharper.quirky</id>
     <name>Formatter Quirks</name>
-    <version>2022.3.0</version>
+    <version>2022.3.1</version>
     <vendor url="https://www.jetbrains.com">JetBrains</vendor>
     <description>Quirkier dotnet languages formatting rules.</description>
     <category>Formatting</category>
