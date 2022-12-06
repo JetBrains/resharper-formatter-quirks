@@ -98,14 +98,13 @@ namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
         .Group(LineBreaksRuleGroup)
         .Name("INDENT_RBRACE")
         .Where(
-          Parent().HasType(ElementType.BLOCK),
-          Left().In(ElementBitsets.C_SHARP_STATEMENT_BIT_SET),
+          Left().HasType(CSharpTokenType.RBRACE),
           Right().HasType(CSharpTokenType.RBRACE)
         )
         .SwitchOnExternalKey(x => x.BANNER_STYLE_RIGHT_BRACE,
           When(true).Switch(
             x => x.CONTINUOUS_INDENT_MULTIPLIER,
-            ContinuousIndentRule.ContinuousIndentOptions(this)))
+            ContinuousIndentRule.ContinuousIndentOptions(this, IndentType.External)))
         .Priority(QuirkyPriority)
         .Build();
 
