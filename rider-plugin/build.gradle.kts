@@ -17,14 +17,17 @@ repositories {
 }
 
 val pluginDescriptionString = """
-    This is a plugin that shows how to implement some quirkier formatting-related features.
-    For the purposes of the demo it offers some formatter settings that won't fit into the standard ReSharper/Rider formatter rulesets, for example:
-    * A setting to turn off the enforcement of linebreaks at the ends of the statements
-    * A setting that allows for banner-style brace indentation
-    * A setting that does column-alignment of commas in the attributes' usages
-    * ... and so on
-
-    You can see the full list of available settings in the screenshots section
+    <p>This is a plugin that shows how to implement some quirkier formatting-related features.</p>
+    <p></p>
+    <p>For the purposes of the demo it offers some formatter settings that won't fit into the standard ReSharper/Rider formatter rulesets, for example:</p>
+    <ul>
+        <li>A setting to turn off the enforcement of linebreaks at the ends of the statements</li>
+        <li>A setting that allows for banner-style brace indentation</li>
+        <li>A setting that does column-alignment of commas in the attributes' usages</li>
+        <li>... and so on</li>
+    </ul>
+    <p></p>
+    <p>You can see the full list of available settings in the screenshots section</p>
 """.trimIndent()
 
 val sdkVersion = "2022.3-SNAPSHOT"
