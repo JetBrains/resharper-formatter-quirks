@@ -6,12 +6,12 @@ using JetBrains.ReSharper.Feature.Services.OptionPages;
 using JetBrains.ReSharper.Feature.Services.OptionPages.CodeStyle;
 using JetBrains.ReSharper.Features.Altering.CodeFormatter.CSharp;
 
-namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
+namespace JetBrains.ReSharper.Plugins.QuirkyFormattings.Psi.CodeStyle.Formatting
 {
   [FormattingSettingsPresentationComponent]
-  public class QuirkyFormattingSettingsSchema : OthersPageSchemaPart
+  public class QuirkyFormattingsSettingsSchema : OthersPageSchemaPart
   {
-    public QuirkyFormattingSettingsSchema(
+    public QuirkyFormattingsSettingsSchema(
       Lifetime lifetime,
       [NotNull] IContextBoundSettingsStoreLive smartContext,
       [NotNull] IValueEditorViewModelFactory itemViewModelFactory,
@@ -29,15 +29,15 @@ namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
       // It is used to demo the setting's effect.
       
       builder
-        .ItemFor((QuirkyFormattingSettingsKey x) => x.ENFORCE_LINE_BREAKS_BETWEEN_STATEMENTS,
+        .ItemFor((QuirkyFormattingsSettingsKey x) => x.ENFORCE_LINE_BREAKS_BETWEEN_STATEMENTS,
           "public static void Main(){Statement1(); Statement2();}")
-        .ItemFor((QuirkyFormattingSettingsKey x) => x.ENFORCE_LINE_BREAKS_AFTER_LEFT_BRACES,
+        .ItemFor((QuirkyFormattingsSettingsKey x) => x.ENFORCE_LINE_BREAKS_AFTER_LEFT_BRACES,
           "public static void Main(){Statement();}")
-        .ItemFor((QuirkyFormattingSettingsKey x) => x.ENFORCE_LOCAL_FUNCTION_DECLARATION_AND_INVOCATION_LINEBREAKS,
+        .ItemFor((QuirkyFormattingsSettingsKey x) => x.ENFORCE_LOCAL_FUNCTION_DECLARATION_AND_INVOCATION_LINEBREAKS,
           "public static void Main(){LocalF(); void LocalF(){};}")
-        .ItemFor((QuirkyFormattingSettingsKey x) => x.INT_ALIGN_ATTRIBUTE_COMMAS,
+        .ItemFor((QuirkyFormattingsSettingsKey x) => x.INT_ALIGN_ATTRIBUTE_COMMAS,
           "[Attr(\r\nLittleString=\"smol\",\r\nLongString=\"This is some very long string literal\",\r\nLittleString1=\"smolagain\"\r\n)]\r\npublic static void Main(){}")
-        .ItemFor((QuirkyFormattingSettingsKey x) => x.BANNER_STYLE_RIGHT_BRACE,
+        .ItemFor((QuirkyFormattingsSettingsKey x) => x.BANNER_STYLE_RIGHT_BRACE,
           "public static void Main(){Console.WriteLine();}");
 
       // Don't call Build() here, it will complain.

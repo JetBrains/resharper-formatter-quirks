@@ -4,6 +4,6 @@
     <PropertyGroup>
         <Company>JetBrains</Company>
         <SignAssembly>true</SignAssembly>
-        <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)resharper-formatter-quirks.snk</AssemblyOriginatorKeyFile>
+        <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)resharper-quirky-formattings.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
 </Project>

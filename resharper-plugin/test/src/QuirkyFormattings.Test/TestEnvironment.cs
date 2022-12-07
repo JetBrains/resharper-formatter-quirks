@@ -11,16 +11,16 @@ using NUnit.Framework;
 
 [assembly: Apartment(ApartmentState.STA)]
 
-namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Tests
+namespace JetBrains.ReSharper.Plugins.QuirkyFormattings.Tests
 {
-  [ZoneMarker] public class ZoneMarker : IRequire<IFormatterQuirksZone> {}
+  [ZoneMarker] public class ZoneMarker : IRequire<IQuirkyFormattingsZone> {}
 
   [ZoneActivator] public class PsiFeatureTestZoneActivator : IActivate<PsiFeatureTestZone> { }
   
-  [ZoneActivator] public class FormatterQuirksZoneActivator : IActivate<IFormatterQuirksZone> { }
+  [ZoneActivator] public class FormatterQuirksZoneActivator : IActivate<IQuirkyFormattingsZone> { }
   
   [ZoneDefinition] public interface IFormatterQuirksTestsEnvZone 
-    : ITestsEnvZone, IRequire<IFormatterQuirksZone>, IRequire<PsiFeatureTestZone> { }
+    : ITestsEnvZone, IRequire<IQuirkyFormattingsZone>, IRequire<PsiFeatureTestZone> { }
   
   [SetUpFixture]
   public class TestEnvironment : ExtensionTestEnvironmentAssembly<IFormatterQuirksTestsEnvZone>

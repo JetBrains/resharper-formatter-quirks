@@ -4,10 +4,10 @@
         <TargetFramework>net472</TargetFramework>
         <LangVersion>9</LangVersion>
         <OutputType>Library</OutputType>
-        <RootNamespace>JetBrains.ReSharper.Plugins.FormatterQuirks</RootNamespace>
-        <AssemblyName>JetBrains.ReSharper.Plugins.FormatterQuirks</AssemblyName>
+        <RootNamespace>JetBrains.ReSharper.Plugins.QuirkyFormattings</RootNamespace>
+        <AssemblyName>JetBrains.ReSharper.Plugins.QuirkyFormattings</AssemblyName>
     </PropertyGroup>
-    
+
     <ItemGroup Label="References">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2">
             <PrivateAssets>all</PrivateAssets>

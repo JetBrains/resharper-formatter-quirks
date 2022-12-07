@@ -3,7 +3,7 @@ using System.Linq;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Tree;
 
-namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
+namespace JetBrains.ReSharper.Plugins.QuirkyFormattings.Psi.CodeStyle.Formatting
 {
   public static class QuirkyCSharpUtils
   {
@@ -12,7 +12,7 @@ namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
       return expressionStatement.GetInvokedLocalFunctionDeclarations().Any();
     }
 
-    public static IEnumerable<IBlock> EnumerateContainingScopes(this ITreeNode node)
+    private static IEnumerable<IBlock> EnumerateContainingScopes(this ITreeNode node)
     {
       for (var trav = node; trav != null; trav = trav.Parent)
         if (trav is IBlock block) yield return block;

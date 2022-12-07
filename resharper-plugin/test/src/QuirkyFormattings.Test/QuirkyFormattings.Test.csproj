@@ -3,8 +3,8 @@
     <PropertyGroup>
         <TargetFramework>net472</TargetFramework>
         <LangVersion>9</LangVersion>
-        <AssemblyName>JetBrains.ReSharper.Plugins.FormatterQuirks.Tests</AssemblyName>
-        <RootNamespace>JetBrains.ReSharper.Plugins.FormatterQuirks.Tests</RootNamespace>
+        <AssemblyName>JetBrains.ReSharper.Plugins.QuirkyFormattings.Tests</AssemblyName>
+        <RootNamespace>JetBrains.ReSharper.Plugins.QuirkyFormattings.Tests</RootNamespace>
         <JetTestProject>True</JetTestProject>
     </PropertyGroup>
 
@@ -21,7 +21,7 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
 
-        <ProjectReference Include="..\..\..\FormatterQuirks\FormatterQuirks.csproj" />
+        <ProjectReference Include="..\..\..\QuirkyFormattings\QuirkyFormattings.csproj" />
         <PackageReference Include="NUnit.Console" Version="3.15.2" />
     </ItemGroup>
 

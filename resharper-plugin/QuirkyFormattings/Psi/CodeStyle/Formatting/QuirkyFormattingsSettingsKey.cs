@@ -1,10 +1,12 @@
+// ReSharper disable InconsistentNaming
+
 using JetBrains.Application.Settings;
 using JetBrains.ReSharper.Psi.CodeStyle;
 
-namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
+namespace JetBrains.ReSharper.Plugins.QuirkyFormattings.Psi.CodeStyle.Formatting
 {
   [SettingsKey(typeof(CodeFormattingSettingsKey), "Quirky formatter settings")]
-  public class QuirkyFormattingSettingsKey
+  public class QuirkyFormattingsSettingsKey
   {
     [SettingsEntry(false, "Indent right brace banner-style")]
     public bool BANNER_STYLE_RIGHT_BRACE;

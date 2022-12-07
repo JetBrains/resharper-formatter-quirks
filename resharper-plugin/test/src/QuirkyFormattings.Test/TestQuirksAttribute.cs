@@ -5,7 +5,7 @@ using JetBrains.ReSharper.TestFramework;
 using JetBrains.TestFramework;
 using JetBrains.Util.Dotnet.TargetFrameworkIds;
 
-namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Tests
+namespace JetBrains.ReSharper.Plugins.QuirkyFormattings.Tests
 {
   [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
   public class TestQuirksAttribute : TestAspectAttribute, ITestTargetFrameworkIdProvider, ITestFileExtensionProvider

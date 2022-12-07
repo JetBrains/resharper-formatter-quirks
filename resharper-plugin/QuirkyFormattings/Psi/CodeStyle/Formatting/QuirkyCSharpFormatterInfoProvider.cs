@@ -13,7 +13,7 @@ using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.Impl.CodeStyle;
 using JetBrains.ReSharper.Psi.Tree;
 
-namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
+namespace JetBrains.ReSharper.Plugins.QuirkyFormattings.Psi.CodeStyle.Formatting
 {
 #if net222
   [Language(typeof(CSharpLanguage))]
@@ -66,7 +66,7 @@ namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
     {
       // This rule turns off the enforcement of linebreaks between statements.
       // Its priority must be lower than any rule's that also modifies statements' line breaks behavior
-      DescribeWithExternalKey<QuirkyFormattingSettingsKey, FormattingRule>()
+      DescribeWithExternalKey<QuirkyFormattingsSettingsKey, FormattingRule>()
         .Group(LineBreaksRuleGroup)
         .Name("ENFORCE_LINE_BREAKS_BETWEEN_STATEMENTS")
         .Where(
@@ -80,7 +80,7 @@ namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
         .Build();
 
       // Don't do linebreaks after braces to get the lisp-style effect
-      DescribeWithExternalKey<QuirkyFormattingSettingsKey, FormattingRule>()
+      DescribeWithExternalKey<QuirkyFormattingsSettingsKey, FormattingRule>()
         .Group(LineBreaksRuleGroup)
         .Name("NO_LINEBREAKS_AFTER_LBRACE")
         .Where(
@@ -94,7 +94,7 @@ namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
         .Build();
 
       // Indent last brace to get the banner-style effect
-      DescribeWithExternalKey<QuirkyFormattingSettingsKey, IndentingRule>()
+      DescribeWithExternalKey<QuirkyFormattingsSettingsKey, IndentingRule>()
         .Group(LineBreaksRuleGroup)
         .Name("INDENT_RBRACE")
         .Where(
@@ -109,7 +109,7 @@ namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
         .Build();
 
       // The following rule demonstrates the use of custom predicates to detect the proper formatting context.
-      DescribeWithExternalKey<QuirkyFormattingSettingsKey, FormattingRule>()
+      DescribeWithExternalKey<QuirkyFormattingsSettingsKey, FormattingRule>()
         .Group(LineBreaksRuleGroup)
         .Name("LOCAL_FUNCTION_DECLARATION_AND_INVOCATION_LINEBREAKS")
         .Where(
@@ -135,7 +135,7 @@ namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
       // It binds an IntAlign token to the formatting context defined in the Where() clause.
       // The token serves as a stretcher that pads with whitespace to the left so there would be no outdent.
       // Token id equality is extremely important. The columns are defined in terms of it.
-      DescribeWithExternalKey<QuirkyFormattingSettingsKey, IntAlignRule>()
+      DescribeWithExternalKey<QuirkyFormattingsSettingsKey, IntAlignRule>()
         .Name("ALIGN_COMMAS_IN_ATTRIBUTE_INVOCATIONS")
         .Where(
           Parent().Satisfies((node, _) => node is IAttribute),
@@ -161,7 +161,7 @@ namespace JetBrains.ReSharper.Plugins.FormatterQuirks.Psi.CodeStyle.Formatting
 #if net223
     public override IEnumerable<IScalarSetting<bool>> PureIntAlignSettings()
     {
-      yield return CalculatedSettingsSchema.GetScalarSetting((QuirkyFormattingSettingsKey x) => x.INT_ALIGN_ATTRIBUTE_COMMAS);
+      yield return CalculatedSettingsSchema.GetScalarSetting((QuirkyFormattingsSettingsKey x) => x.INT_ALIGN_ATTRIBUTE_COMMAS);
     }
 #endif
   }

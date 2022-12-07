@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatterQuirks", "FormatterQuirks\FormatterQuirks.csproj", "{16D928A3-87D6-4EE8-B302-35CD4C5361A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuirkyFormattings", "QuirkyFormattings\QuirkyFormattings.csproj", "{16D928A3-87D6-4EE8-B302-35CD4C5361A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionDependencies", "SolutionDependencies", "{6AF420D8-8F91-4854-85C0-CC24E3405976}"
 	ProjectSection(SolutionItems) = preProject
@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionDependencies", "Sol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginRunner", "PluginRunner\PluginRunner.csproj", "{76850B03-7759-42BF-92F4-60B9851D1E9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatterQuirks.Test", "test\src\FormatterQuirks.Test\FormatterQuirks.Test.csproj", "{48AEA1CD-C79D-4CC9-9AC0-9F30255FA4BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuirkyFormattings.Test", "test\src\QuirkyFormattings.Test\QuirkyFormattings.Test.csproj", "{48AEA1CD-C79D-4CC9-9AC0-9F30255FA4BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -33,12 +33,12 @@ val waveId = sdkVersion.slice(2..3) + sdkVersion[5] // 2022.2.x -> 222
 val werror = false
 
 val dotnetDllFiles = listOf(
-    "../resharper-plugin/FormatterQuirks/bin/$buildConfiguration/net472/JetBrains.ReSharper.Plugins.FormatterQuirks.dll",
-    "../resharper-plugin/FormatterQuirks/bin/$buildConfiguration/net472/JetBrains.ReSharper.Plugins.FormatterQuirks.pdb"
+    "../resharper-plugin/QuirkyFormattings/bin/$buildConfiguration/net472/JetBrains.ReSharper.Plugins.QuirkyFormattings.dll",
+    "../resharper-plugin/QuirkyFormattings/bin/$buildConfiguration/net472/JetBrains.ReSharper.Plugins.QuirkyFormattings.pdb"
 )
 
 intellij {
-    pluginName.set("formatter-quirks")
+    pluginName.set("quirky-formattings")
 
     downloadSources.set(false)
     instrumentCode.set(false)
@@ -132,7 +132,7 @@ tasks {
     val buildDotnet by registering {
         dependsOn(prepareDotnetPart)
         shouldRunAfter(buildPlugin)
-        val solution = File(project.projectDir, "../resharper-plugin/FormatterQuirks.sln")
+        val solution = File(project.projectDir, "../resharper-plugin/QuirkyFormattings.sln")
 
         val dotnetCli = findDotNet() ?: error("No `dotnet` in the PATH variable")
         val dotnetArgs = listOf(
@@ -278,7 +278,7 @@ tasks {
             "wave_id" to waveId
         )
 
-        setNuspecFile("${project.projectDir}/../resharper-plugin/formatter-quirks.nuspec")
+        setNuspecFile("${project.projectDir}/../resharper-plugin/quirky-formattings.nuspec")
         setDestinationDir("${project.projectDir}/build/distributions/$buildConfiguration")
     }
 }

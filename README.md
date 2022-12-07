@@ -1,8 +1,8 @@
-# ReSharper quirky formatting
+# ReSharper quirky formattings
 
 [![JetBrains official project](https://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
-This is a plugin that shows hot to implement some of the quirkier formatting-related features.
+This is a plugin that shows how to implement some of the quirkier formatting-related features.
 
 This Rider/ReSharper plugin consists of two parts:
 * The rider part (`rider-plugin`): essentially a stub that sets up the ReSharper plugin for Rider and acts as a build bootstrap with its gradle configuration.
