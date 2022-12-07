@@ -1,5 +1,6 @@
 import org.apache.tools.ant.taskdefs.condition.Os
 import org.jetbrains.intellij.tasks.BuildSearchableOptionsTask
+import org.jetbrains.intellij.tasks.PatchPluginXmlTask
 import org.jetbrains.intellij.tasks.RunIdeTask
 
 plugins {
@@ -15,8 +16,19 @@ repositories {
     maven { setUrl("https://cache-redirector.jetbrains.com/www.jetbrains.com/intellij-repository/snapshots") }
 }
 
+val pluginDescriptionString = """
+    This is a plugin that shows how to implement some quirkier formatting-related features.
+    For the purposes of the demo it offers some formatter settings that won't fit into the standard ReSharper/Rider formatter rulesets, for example:
+    * A setting to turn off the enforcement of linebreaks at the ends of the statements
+    * A setting that allows for banner-style brace indentation
+    * A setting that does column-alignment of commas in the attributes' usages
+    * ... and so on
+
+    You can see the full list of available settings in the screenshots section
+""".trimIndent()
+
 val sdkVersion = "2022.3-SNAPSHOT"
-val pluginVersion = "2022.3.1"
+val pluginVersion = "2022.3.3"
 
 val skipDotNet = false
 val projectDirPath = projectDir.invariantSeparatorsPath
@@ -50,7 +62,7 @@ intellij {
 }
 
 tasks {
-    withType<org.jetbrains.intellij.tasks.RunIdeTask> {
+    withType<RunIdeTask> {
         maxHeapSize = "1500m"
         jvmArgs = listOf(
             "-Drider.backend.netcore=false"
@@ -275,10 +287,16 @@ tasks {
             "plugin_version" to pluginVersion,
             "configuration" to buildConfiguration.toLowerCase(),
             "dotnet_version" to dotnetVersion,
-            "wave_id" to waveId
+            "wave_id" to waveId,
+            "description" to pluginDescriptionString
         )
 
         setNuspecFile("${project.projectDir}/../resharper-plugin/quirky-formattings.nuspec")
         setDestinationDir("${project.projectDir}/build/distributions/$buildConfiguration")
+    }
+
+    withType<PatchPluginXmlTask> {
+        version.set(pluginVersion)
+        pluginDescription.set(pluginDescriptionString)
     }
 }

@@ -1,4 +1,4 @@
-rootProject.name = "formatter-quirks"
+rootProject.name = "quirky-formattings"
 
 pluginManagement {
     repositories {

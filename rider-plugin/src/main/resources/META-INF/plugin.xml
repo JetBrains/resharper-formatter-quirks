@@ -1,9 +1,11 @@
 <idea-plugin url="" require-restart="true" package="com.jetbrains.resharper.quirky">
     <id>com.jetbrains.resharper.quirky</id>
     <name>Quirky Formattings</name>
-    <version>2022.3.1</version>
+    <!--suppress PluginXmlValidity -->
+    <version>SET FROM GRADLE</version>
     <vendor url="https://www.jetbrains.com">JetBrains</vendor>
-    <description>Quirkier dotnet languages formatting rules.</description>
+    <!--suppress PluginXmlValidity -->
+    <description>SET FROM GRADLE</description>
     <category>Formatting</category>
 
     <idea-version since-build="2022.3" />
