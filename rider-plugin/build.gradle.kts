@@ -1,13 +1,14 @@
+import com.ullink.NuGetPack
 import org.apache.tools.ant.taskdefs.condition.Os
 import org.jetbrains.intellij.tasks.BuildSearchableOptionsTask
 import org.jetbrains.intellij.tasks.PatchPluginXmlTask
 import org.jetbrains.intellij.tasks.RunIdeTask
 
 plugins {
-    id("com.ullink.nuget") version "2.23"
-
-    id("org.jetbrains.intellij") version "1.9.0"
     kotlin("jvm") version "1.7.0"
+    id("org.jetbrains.intellij") version "1.10.1"
+
+    id("com.ullink.nuget") version "2.23"
 }
 
 repositories {
@@ -30,8 +31,8 @@ val pluginDescriptionString = """
     <p>You can see the full list of available settings in the screenshots section</p>
 """.trimIndent()
 
-val sdkVersion = "2022.3-SNAPSHOT"
-val pluginVersion = "2022.3.3"
+val sdkVersion = "2022.3.1"
+val pluginVersion = "2022.3.5"
 
 val skipDotNet = false
 val projectDirPath = projectDir.invariantSeparatorsPath
@@ -281,7 +282,7 @@ tasks {
                 "-Djna.boot.library.path=${setupDependencies.orNull?.idea?.get()?.classes}/lib/jna/${System.getProperty("os.arch")}")
     }
 
-    val pluginNuGetPack by registering(com.ullink.NuGetPack::class) {
+    withType<NuGetPack> {
         dependsOn(buildDotnet)
         packageAnalysis = false
         packageVersion = pluginVersion
@@ -294,8 +295,8 @@ tasks {
             "description" to pluginDescriptionString
         )
 
-        setNuspecFile("${project.projectDir}/../resharper-plugin/quirky-formattings.nuspec")
-        setDestinationDir("${project.projectDir}/build/distributions/$buildConfiguration")
+        setNuspecFile("${projectDir}/../resharper-plugin/quirky-formattings.nuspec")
+        setDestinationDir("${projectDir}/build/distributions/$buildConfiguration")
     }
 
     withType<PatchPluginXmlTask> {

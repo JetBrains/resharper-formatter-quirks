@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- See the :pluginNugetPack task in ../rider-plugin/build.gradle.kts for variables sources -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package>
   <metadata>
     <id>JetBrains.ReSharper.Plugins.FormatterQuirks</id>
     <title>Quirky Formattings</title>
@@ -8,7 +8,7 @@
     <authors>JetBrains</authors>
     <owners>JetBrains</owners>
     <summary>A plugin that accumulates some of the *quirkier* formatting rules.</summary>
-    <description>$description$</description>
+    <description><![CDATA[$description$]]></description>
     <releaseNotes>$ReleaseNotes$</releaseNotes>
     <iconUrl>http://resharper-plugins.jetbrains.com/Content/Images/packageReSharper.png</iconUrl>
     <copyright>Copyright 2022 JetBrains, s.r.o</copyright>
