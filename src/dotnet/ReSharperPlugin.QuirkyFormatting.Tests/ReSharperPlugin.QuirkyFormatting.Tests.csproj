@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GitHubActionsTestLogger" Version="2.0.1" />
+    <PackageReference Include="JetBrains.ReSharper.SDK.Tests" Version="$(SdkVersion)" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReSharperPlugin.QuirkyFormatting\ReSharperPlugin.QuirkyFormatting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="test/**/*" />
+    <Compile Include="test\data\CodeFormatter\CSharp\AlignAttributeInvocationCommas.cs" />
+    <Compile Include="test\data\CodeFormatter\CSharp\BannerStyleRightBrace.cs" />
+    <Compile Include="test\data\CodeFormatter\CSharp\LeftBraceLinebreaks.cs" />
+    <Compile Include="test\data\CodeFormatter\CSharp\LocalFunctionsLinebreaks.cs" />
+    <Compile Include="test\data\CodeFormatter\CSharp\StatementLinebreaks.cs" />
+    <Compile Include="test\src\CSharpQuirkyFormattingTest.cs" />
+    <None Include="test/**/*" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+﻿using System;
+
+public class TriStringTupleAttribute : Attribute
+{
+    public string S1 { get; init; }
+    public string S2 { get; init; }
+    public string S3 { get; init; }
+}
+
+[TriStringTuple(
+    S1 = "123",
+    S2 = "asdfghjklasdfghjklasdfghjklasdfghjkl",
+    S3 = "123"
+)]
+public class AlignAttributeInvocationCommas
+{
+}
