@@ -1,4 +1,7 @@
-# QuirkyFormatting for Rider and ReSharper
+[![JetBrains official project](https://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
-[![Rider](https://img.shields.io/jetbrains/plugin/v/RIDER_PLUGIN_ID.svg?label=Rider&colorB=0A7BBB&style=for-the-badge&logo=rider)](https://plugins.jetbrains.com/plugin/RIDER_PLUGIN_ID)
-[![ReSharper](https://img.shields.io/jetbrains/plugin/v/RESHARPER_PLUGIN_ID.svg?label=ReSharper&colorB=0A7BBB&style=for-the-badge&logo=resharper)](https://plugins.jetbrains.com/plugin/RESHARPER_PLUGIN_ID)
+# ReSharper quirky formattings
+
+This is a plugin that shows how to implement some of the quirkier formatting-related features.
+
+This Rider/ReSharper plugin closely follows the structure defined in the [rider plugin template](https://github.com/JetBrains/resharper-rider-plugin). The documentation on how to build it may be found in the template's documentation.
